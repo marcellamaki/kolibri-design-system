@@ -9,6 +9,7 @@
     :href="isAnchor ? (disabled ? null : href) : null"
     :tabindex="(isDivider || isAnchor || disabled) ? null : '0'"
     :target="isAnchor ? (disabled ? null : target) : null"
+
   >
     <slot v-if="!isDivider">
       <div class="ui-menu-option-content">
@@ -128,6 +129,8 @@
       &:focus:not(.is-disabled),
       body[modality='keyboard'] &:focus {
         background-color: $ui-menu-item-hover-color;
+        outline: $focus-outline-color solid 3px;
+        outline-offset: -2px;
       }
 
       &.is-disabled {
