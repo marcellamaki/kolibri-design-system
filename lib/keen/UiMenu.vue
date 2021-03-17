@@ -26,7 +26,6 @@
       @keydown.enter.native="selectOption(option)"
 
       @keydown.esc.native.esc="closeMenu"
-      :style="[ activeOutline ]"
     >
       <slot name="option" :option="option"></slot>
     </UiMenuOption>
@@ -100,9 +99,6 @@
           'has-icons': this.hasIcons,
           'has-secondary-text': this.hasSecondaryText,
         };
-      },
-      activeOutline() {
-        return this.isActive ? this.$coreOutline : {};
       },
     },
 

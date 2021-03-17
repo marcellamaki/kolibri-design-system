@@ -9,7 +9,6 @@
     :href="isAnchor ? (disabled ? null : href) : null"
     :tabindex="(isDivider || isAnchor || disabled) ? null : '0'"
     :target="isAnchor ? (disabled ? null : target) : null"
-
   >
     <slot v-if="!isDivider">
       <div class="ui-menu-option-content">
